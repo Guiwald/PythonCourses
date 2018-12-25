@@ -1,5 +1,8 @@
 import pygame
 
+pygame.init()
+
+
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
 WHITE_COLOR = (255, 255, 255)
@@ -13,6 +16,13 @@ game_screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 game_screen.fill(WHITE_COLOR)
 
 while not is_game_over:
+
+	for event in pygame.event.get():
+		if event.type = pygame.QUIT:
+			is_game_over = True
+
 	pygame.display.update()
 	clock.tick(TICK_RATE)
-	
+
+pygame.quit()
+quit()
