@@ -6,7 +6,7 @@ pygame.init()
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
 SCREEN_TITLE = 'Crossy Game'
-WHITE_COLOR = (100, 255, 255)
+WHITE_COLOR = (255, 255, 255)
 BLACK_COLOR = (0, 0, 0)
 clock = pygame.time.Clock()
 TICK_RATE = 60
@@ -23,6 +23,8 @@ while not is_game_over:
 		if event.type == pygame.QUIT:
 			is_game_over = True
 		print(event)
+
+	pygame.draw.rect(game_screen, BLACK_COLOR, [400, 400, 100, 100])
 
 	pygame.display.update()
 	clock.tick(TICK_RATE)
